@@ -1,0 +1,133 @@
+/* CSS Document */
+body {
+    font:18px Helvetica;
+    color: #222;
+    text-align:center;
+    padding:35px; }
+  
+form, p, span {
+    margin:0;
+    padding:0; }
+  
+input { font:12px arial; }
+  
+a {
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    color:#0000FF;
+    text-decoration:none; }
+  
+    a:hover { text-decoration:underline; }
+
+#logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.main_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 115px;
+    margin-left: 15px;
+    border: 1px solid #000000;
+    width: 200px;
+    overflow-y: auto;
+}
+
+.main_menu a {
+    display: block;
+    padding: 12px;
+    background-color: #bdcfd6;
+    color: black;
+    text-decoration: none;
+    text-align: left;
+}
+
+.main_menu a:hover {
+    background-color: #135f7c;
+    color: #ccc;
+}
+
+.main_menu a.active {
+    background-color: #135f7c;
+    color: white;
+}
+
+#wrapper, #loginform {
+    margin:0 auto;
+    padding: 1em;
+    /*padding-bottom:25px;*/
+    background:#bdcfd6;
+    /* nu color: #E5D4AB;*/
+    background-color: #bdcfd6;
+    width:504px;
+    border:1px solid #000; }
+  
+#loginform { padding-top:18px; }
+  
+    #loginform p { margin: 5px; }
+  
+#chatbox {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background:#fff;
+    height:270px;
+    width:430px;
+    border:1px solid #bdcfd6;
+    overflow:auto; }
+  
+#usermsg {
+    width:395px;
+    border:1px solid #bdcfd6; }
+  
+#submit { width: 60px; }
+  
+.error { color: #ff0000; }
+  
+#chat_menu { padding:12.5px 25px 12.5px 25px; }
+  
+.welcome { 
+    /*float:left; */
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+  
+.logout { float:right; }
+  
+.msgln { margin:0 0 2px 0; }
+
+.office_hours_status {
+    position: fixed;
+    top: 10%;
+    left: 40%;
+    width: 300;
+    padding: 12px;
+    background-color: #ec3641;
+    color: white;
+}
+
+.x_button {
+    height: 18px;
+    width: 18px;
+    padding: 2px;
+}
+
+.general_button {
+    background-color: #d7e2e6;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    padding: 5px;
+}
+
+.general_button:hover {
+    background-color: #135f7c;
+    color: white;
+}
