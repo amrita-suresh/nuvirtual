@@ -14,8 +14,9 @@
         <!--<p>Welcome. Please select an option.</p>-->
         <a href="index.html">Home</a>
         <a href="#" class="active">Go to Chat</a>
-        <a href="class_info.html">View my Classes</a>
+        <a href="class_info.html">View my Info</a>
     </div>
+
     <div id="wrapper">
         <div class="chat_menu">
             <p class="welcome">Welcome! Enter a message: <b></b></p>
@@ -37,7 +38,7 @@
 
     <form name="message" id="message" action="">
         <input name="usermsg" type="text" id="usermsg" size="63" />
-        <input name="submitmsg" type="button"  class="general_button" value="Send"/>
+        <input name="submitmsg" id="submitmsg" type="button"  class="general_button" value="Send"/>
         <!--<input name="resolveq" type="submit" id="resolveq" value="Resolve Question"/>-->
     </form>
 
@@ -50,17 +51,20 @@
 // jQuery Document
 $(document).ready(function(){
 	var transcript = [];
+    console.log("JS Ready");
     //If user wants to end session
     /*$("#exit").click(function(){
         var exit = confirm("Are you sure you want to end the session?");
         if(exit==true){window.location = 'index2.html?logout=true';}      
     });*/
     //If user submits the form
-    $("#submitmsg").click(function(){   
-        //var clientmsg = $("#usermsg").val();
 
+    (document).getElementById("submitmsg").onclick = function(){   
+        //var clientmsg = $("#usermsg").val();
+        console.log("I got here")
         var form_vals = document.getElementById("message")
         var chat_text = form_vals.elements[0].value;
+        console.log(chat_text)
         transcript.push(chat_text);
 
         // inspired by:
@@ -70,7 +74,7 @@ $(document).ready(function(){
     	let li = document.createElement('li');
     	li.innerHTML = "<b>You: </b>" + transcript[transcript.length - 1];
     	ul.appendChild(li);
-    	});
+    	};
 
         /*transcript.push(clientmsg);
         console.log(transcript);*/

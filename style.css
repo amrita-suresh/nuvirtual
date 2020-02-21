@@ -33,7 +33,7 @@ a {
     left: 0;
     margin-top: 115px;
     margin-left: 15px;
-    border: 1px solid #000000;
+    border: none;
     width: 200px;
     overflow-y: auto;
 }
@@ -84,7 +84,8 @@ a {
   
 #usermsg {
     width:395px;
-    border:1px solid #bdcfd6; }
+    border:1px solid #bdcfd6;
+    height: 20px; }
   
 #submit { width: 60px; }
   
@@ -104,7 +105,7 @@ a {
 
 .office_hours_status {
     position: fixed;
-    top: 10%;
+    top: 20%;
     left: 40%;
     width: 300;
     padding: 12px;
@@ -131,3 +132,12 @@ a {
     background-color: #135f7c;
     color: white;
 }
+
+
+
+/*.gcse-searchresults {
+    top: 25%;
+    left: 40%;
+    width: 400s;
+    border: 0;
+}*/
