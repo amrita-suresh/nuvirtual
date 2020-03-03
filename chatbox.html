@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<head>
+    <title>NUVirtual</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <a href="index.html" title="NUVirtual Homepage">
+        <img src="logo.png" id="logo"/>
+    </a>
+        <div class="main_menu">
+        <!--<p>Welcome. Please select an option.</p>-->
+        <a href="index.html">Home</a>
+        <a href="#" class="active">Go to Chat</a>
+        <a href="class_info.html">View my Info</a>
+    </div>
+
+    <div id="wrapper">
+        <div class="chat_menu">
+            <p class="welcome">Welcome! Enter a message: <b></b></p>
+            <!--<p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+            <div style="clear:both"></div>-->
+        </div>
+
+        <div id="chatbox">
+            <!--<?php
+            if(file_exists("log.html") and filesize("log.html") > 0){
+            $handle = fopen("log.html", "r");
+            $contents = fread($handle, filesize("log.html"));
+            fclose($handle);
+
+            echo $contents;
+        }?>-->
+
+        </div>
+
+    <form name="message" id="message" action="">
+        <input name="usermsg" type="text" id="usermsg" size="63" />
+        <input name="submitmsg" id="submitmsg" type="button"  class="general_button" value="Send"/>
+        <!--<input name="resolveq" type="submit" id="resolveq" value="Resolve Question"/>-->
+    </form>
+
+
+    </div>
+
+<script type="text/javascript">
+// inspired by:
+// https://code.tutsplus.com/tutorials/how-to-create-a-simple-web-based-chat-application--net-5931
+// jQuery Document
+$(document).ready(function(){
+	var transcript = [];
+    console.log("JS Ready");
+    //If user wants to end session
+    /*$("#exit").click(function(){
+        var exit = confirm("Are you sure you want to end the session?");
+        if(exit==true){window.location = 'index2.html?logout=true';}      
+    });*/
+    //If user submits the form
+
+    (document).getElementById("submitmsg").onclick = function(){   
+        //var clientmsg = $("#usermsg").val();
+        console.log("I got here")
+        var form_vals = document.getElementById("message")
+        var chat_text = form_vals.elements[0].value;
+        console.log(chat_text)
+        transcript.push(chat_text);
+
+        // inspired by:
+        // https://getbutterfly.com/generate-html-list-from-javascript-array/
+        let ul = document.createElement('ul');
+    	document.getElementById('chatbox').appendChild(ul);
+    	let li = document.createElement('li');
+    	li.innerHTML = "<b>You: </b>" + transcript[transcript.length - 1];
+    	ul.appendChild(li);
+    	};
+
+        /*transcript.push(clientmsg);
+        console.log(transcript);*/
+        //$.post("post.php", {text: clientmsg});              
+        //$("#usermsg").attr("value", "");
+        //return false;
+    });
+
+    //Load the file containing the chat log
+    /* loadLog(){     
+
+        $.ajax({
+            url: "log.html",
+            cache: false,
+            success: function(html){        
+                $("#chatbox").html(html); //Insert chat log into the #chatbox div               
+            },
+        });
+    }
+
+    setInterval (loadLog, 2500);    //Reload file every 2500 ms or x ms if you wish to change the second parameter*/
+//});
+</script>
+</body>
+</html>
