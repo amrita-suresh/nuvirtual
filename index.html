@@ -7,8 +7,9 @@
   <title>NU Virtual</title>
   <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
   <script defer src="script.js"></script>
+  <link type="text/css" rel="stylesheet" href="style.css" />
   <style>
-    body {
+    /*body {
       padding: 0;
       margin: 0;
       display: flex;
@@ -20,9 +21,9 @@
       height: 100%;
       max-width: 1200px;
       max-height: 700px;
-      border-style: solid;
+      border-style: solid;*/
       /* overflow:auto; */
-      overflow-y: scroll;
+      /*overflow-y: scroll;
 
     }
 
@@ -84,7 +85,7 @@
     padding: 5px;
 } */
 
-    #home:hover {
+    /*#home:hover {
       background-color: #135f7c;
       color: white;
 }
@@ -92,7 +93,7 @@
     #chat {
       position: absolute; left: 20px; top: 230px;
     }
-    
+
 
     #draw {
       position: absolute; left: 20px; top: 260px;
@@ -104,12 +105,22 @@
 
     #goog {
       position: absolute; left: 20px; top: 320px;
-    }
+    }*/
 
   </style>
 </head>
 <body>
-  <img src="nuVirtualLogo.jpg" alt="image" style="position: absolute; top: 0; left: 0;" height="150" width="150"/>
+  <!--<img src="nuVirtualLogo.jpg" alt="image" style="position: absolute; top: 0; left: 0;" height="150" width="150"/>-->
+  <a href="home.html" title="NUVirtual Homepage">
+      <img src="nuVirtualLogo.jpg" id="logo"/>
+  </a>
+
+  <div class="main_menu">
+      <a href="home.html">Home</a>
+      <a href="#" class="active">Go to Chat</a>
+      <!--<a href="class_info.html">View My Info</a>-->
+  </div>
+
   <div id="message-container"></div>
   <form id="send-container">
     <input type="text" id="message-input">
@@ -120,7 +131,7 @@
     <input type="submit" value="search on google" />
   </form>
 
-  <form id="chat" action="index.html">
+  <!--<form id="chat" action="index.html">
       <input type="submit" value="chat button" />
     </form>
 
@@ -139,7 +150,7 @@
 
   <form id="submit-button" action="submitPage.html">
     <input type="image" src="submit.jpg" alt="Submit" width="60" height="60">
-  </form>
+  </form>-->
 
 
 </body>
